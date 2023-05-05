@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-qzze
+  namespace: mvp-demo-dev-namespace-hwld-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/test-images@sha256:80455697923ec945d1c4f947d1738d49b604853d822247b6cd7e50dccf3bd8cb
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
